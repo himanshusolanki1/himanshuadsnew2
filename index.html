@@ -1,104 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusive Community Access - Join Now</title>
+    <title>TRADER SUCCESS - Official Access</title>
+
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for custom colors and use Inter font -->
+
+    <!-- META PIXEL CODE -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-blue': '#0088cc', // Telegram's main color
-                        'dark-bg': '#1f2937',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '803920772553128');
+        fbq('track', 'PageView');
     </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=803920772553128&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- END META PIXEL -->
+
     <style>
-        /* Ensures body uses the Inter font and centers the content */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            min-height: 100vh;
+            /* Core background changed to White */
+            background-color: #ffffff;
+            /* Removed the chart background pattern */
+            background-size: cover;
+        }
+
+        .main-card {
+            /* Inside background changed to Bright Yellow */
+            background-color: #fce303; 
+            /* Adjusted padding to match the look */
+            padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+        }
+
+        .logo-container {
+            /* Position the logo in the center, overlapping the background */
+            position: relative;
+            margin-top: -60px; /* Pull the logo up */
+            margin-bottom: 10px;
+        }
+
+        .logo-ring {
+            border-radius: 50%;
+            border: 4px solid #ffffff; /* White border as seen in image */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f3f4f6;
+            background-color: #000; /* Black background for the logo circle */
         }
-        /* Custom styling for the hero button */
-        .cta-button {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+
+        .verify-badge {
+            position: absolute;
+            bottom: 0;
+            right: 15%; /* Adjusted for a natural look */
+            background-color: #3b82f6; /* Blue for the checkmark */
+            color: white;
+            border-radius: 50%;
+            padding: 2px;
+            font-size: 14px;
+            /* Border color must match the new main-card background */
+            border: 2px solid #fce303; 
+            z-index: 10;
         }
-        .cta-button:hover {
-            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
-            transform: translateY(-2px);
+
+        .info-button {
+            /* Light yellow button for the first callout */
+            background-color: #ffffcc;
+            color: #333333;
+            border-radius: 8px;
+            padding: 1.25rem 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.1s ease;
         }
+        .info-button:active { transform: scale(0.98); }
+
+        .cta-button-secondary {
+            /* Yellow/Cream button for the second callout */
+            background-color: #fcf8d4;
+            color: #1e40af; /* Dark blue text */
+            border-radius: 8px;
+            padding: 1.25rem 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.1s ease;
+        }
+        .cta-button-secondary:active { transform: scale(0.98); }
+
+        .cta-button-main {
+            /* Primary Telegram button */
+            background-color: #0088cc; /* Telegram Blue */
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+        .cta-button-main:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+        }
+        .cta-button-main:active { transform: scale(0.98); }
     </style>
+
 </head>
-<body class="p-4">
 
-    <!-- Main Content Card -->
-    <main class="w-full max-w-lg mx-auto bg-white rounded-xl shadow-2xl overflow-hidden mb-6">
-        <div class="p-8 md:p-10 text-center">
-            
-            <!-- Telegram Icon Placeholder -->
-            <div class="flex justify-center mb-6">
-                <!-- Inline SVG of a Telegram plane icon for a professional look -->
-                <svg class="w-16 h-16 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.5 7.6l-5.7 3.3c-.2.1-.4.1-.6 0l-3.3-2.1c-.2-.1-.3-.4-.1-.6l11.4-6.3c.2-.1.4-.1.6 0 .2.1.2.3.1.5l-2.4 10.4c-.1.4-.4.6-.8.6-.2 0-.4-.1-.6-.2l-2.3-1.6c-.2-.1-.4-.1-.6 0l-1.9 1.3c-.2.1-.3.3-.2.5l.4 2c0 .1 0 .2.1.2.1.1.2.1.3.1.2 0 .4-.1.5-.2l5-5c.1-.1.2-.3.1-.4 0-.1-.1-.3-.2-.4z"/>
-                </svg>
+<!-- With a white background, we need to add some vertical space (py-10) to center the card slightly -->
+<body class="flex flex-col items-center justify-start min-h-screen py-10 px-4 bg-white">
+
+    <!-- Card Container -->
+    <div class="w-full max-w-sm rounded-xl overflow-visible text-center main-card shadow-2xl">
+
+        <!-- Logo/Header Section -->
+        <div class="logo-container mx-auto flex justify-center">
+            <div class="relative">
+                <div class="logo-ring">
+                    <!-- Placeholder: Please ensure 'logo.png' is available at your deployment root -->
+                    <img src="logo.png" class="w-full h-full object-cover" alt="Trader Success Logo" onerror="this.onerror=null; this.src='https://placehold.co/100x100/000/fff?text=LOGO';" />
+                </div>
+                <!-- Verification Badge -->
+                <span class="verify-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                </span>
             </div>
+        </div>
 
-            <h1 class="text-3xl font-extrabold text-gray-800 mb-4 md:text-4xl">
-                Unlock Exclusive Community Access
-            </h1>
-            
-            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                Join our private Telegram channel now to receive immediate, members-only insights and resources.
-                This is your gateway to expert discussions and a supportive network.
+        <!-- Channel Title and User Count -->
+        <h1 class="text-3xl font-extrabold text-gray-800 mt-2">
+            TRADER SUCCESS
+        </h1>
+
+        <p class="text-base font-semibold text-gray-700 mt-1 mb-6">
+            Join **38,000+ Active Users** Every Month
+        </p>
+
+        <!-- Secondary CTA Buttons -->
+        <!-- First Info Button (The #1 Trading Channel) -->
+        <a href="https://t.me/+IqG2TaWYEMZkZGE1" target="_blank" class="info-button w-full block">
+            <p class="text-lg font-bold">
+                📈 The #1 Trading Channel - Make Your First Profit Today!
             </p>
+        </a>
 
-            <!-- IMPORTANT: The Call-to-Action (CTA) Button -->
-            <!-- The link is clearly labeled and directs to the provided URL -->
-            <a href="https://t.me/+IqG2TaWYEMZkZGE1" target="_blank" rel="noopener noreferrer"
-               class="cta-button inline-flex items-center justify-center w-full py-4 text-xl font-bold text-white bg-primary-blue rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-primary-blue focus:ring-opacity-50 uppercase tracking-wider">
-                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                Join Private Telegram Channel
-            </a>
+        <!-- Second Info Button (Start Trading & Making Money) -->
+        <a href="https://t.me/+IqG2TaWYEMZkZGE1" target="_blank" class="cta-button-secondary w-full block">
+            <p class="text-lg font-bold flex items-center justify-center">
+                <span class="text-blue-600 mr-2">&bull;</span> Start Trading & Making Money
+            </p>
+        </a>
 
-            <!-- Transparency and Disclaimer Section (Crucial for Policy Compliance) -->
-            <div class="mt-8 pt-4 border-t border-gray-100 text-sm text-gray-500">
-                <p>By clicking above, you will be redirected to the Telegram app or website to access our private channel.</p>
-            </div>
+        <!-- Primary CTA Button (JOIN TELEGRAM) -->
+        <a href="https://t.me/+IqG2TaWYEMZkZGE1"
+           target="_blank"
+           id="joinButton"
+           class="cta-button-main text-white font-extrabold py-3 px-6 rounded-lg text-xl uppercase tracking-wider w-full block">
+            JOIN TELEGRAM <span class="ml-2">📊</span>
+        </a>
 
-        </div>
-    </main>
-
-    <!-- Footer for Legal Links (ABSOLUTELY ESSENTIAL for Ad Compliance) -->
-    <footer class="w-full max-w-lg mx-auto py-4 text-center text-xs text-gray-500">
-        <p class="mb-1">
-            © 2025 Exclusive Community. All Rights Reserved.
+        <!-- Footer Text -->
+        <p class="text-xs text-gray-700 mt-3 font-medium">
+            If You Have Telegram, You Can Run Cyber Binary Trading Immediately
         </p>
-        <div class="space-x-4">
-            <!-- IMPORTANT: You MUST replace these placeholder links with actual, functioning legal documents. -->
-            <a href="#privacy-policy-placeholder" class="hover:text-primary-blue transition-colors underline">Privacy Policy</a>
-            <a href="#terms-of-service-placeholder" class="hover:text-primary-blue transition-colors underline">Terms of Service</a>
-            <a href="#contact-us-placeholder" class="hover:text-primary-blue transition-colors underline">Contact Us</a>
-        </div>
-        <!-- IMPORTANT DISCLAIMER -->
-        <p class="mt-4 text-red-600 font-semibold">
-            Disclaimer: This site is not part of the Telegram or Meta website.
-        </p>
-    </footer>
+
+    </div>
+
+    <!-- Auto Redirect Script -->
+    <script>
+        // Note: The REDIRECT_URL has been updated to the new link.
+        const REDIRECT_URL = "https://t.me/+IqG2TaWYEMZkZGE1";
+        // Timer changed from 5000ms to 10000ms (10 seconds)
+        const REDIRECT_DELAY_MS = 10000; 
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const joinButton = document.getElementById('joinButton');
+
+            // Set the auto-redirect timer
+            const autoRedirect = setTimeout(() => {
+                console.log("Auto-redirecting to Telegram...");
+                // Trigger the Lead event on redirect
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead', { method: 'AutoRedirect' });
+                }
+                window.location.href = REDIRECT_URL;
+            }, REDIRECT_DELAY_MS);
+
+            // If the user clicks *any* button (including the main one or the secondary ones), we assume they are engaging
+            // Note: The selector uses 'https://t.me/'. Since all links are updated, this works correctly.
+            document.querySelectorAll('a[href^="https://t.me/"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Stop the auto-redirect if they manually click
+                    clearTimeout(autoRedirect);
+                    
+                    // Trigger the Lead event on manual click
+                    if (typeof fbq === 'function') {
+                        fbq('track', 'Lead', { method: 'ManualClick', url: e.currentTarget.href });
+                    }
+
+                    // Proceed with the navigation
+                });
+            });
+
+        });
+    </script>
 
 </body>
 </html>
