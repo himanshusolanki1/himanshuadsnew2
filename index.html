@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Updated Title for Educational Focus -->
-    <title>LUCKY  - Free  Education</title>
+    <title>LUCKY  Free  Education</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -93,7 +93,7 @@
             <!-- Key Message 2: Brand Name -->
             <h1 class="text-3xl font-extrabold text-gray-900 mb-6">
                 <!-- Border color changed to green -->
-                <span class="border-b-4 border-green-500">LUCKY</span>
+                <span class="border-b-4 border-green-500">LUCKY </span>
             </h1>
             
             <!-- Primary CTA Button (Link retained, no auto-click) -->
@@ -130,7 +130,21 @@
                 </p>
                 <p class="text-base font-medium text-gray-800 bg-green-100 p-3 rounded-lg flex items-center justify-center space-x-2">
                     <span>🤝</span>
-                    <span>Discuss Strategies with Fellow Members seconds) for a regular cycle, not aggressive 5s
+                    <span>Discuss Strategies with Fellow Members</span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript for Countdown Timer and Tracking -->
+    <script>
+        // --- Countdown Timer Logic ---
+        const countdownContainer = document.getElementById('countdown-timer');
+        const timerMessage = document.getElementById('timer-message');
+        const joinButton = document.getElementById('joinButton');
+        
+        // Initial duration set to 24 hours (86400 seconds) for a regular cycle, not aggressive 5s
         const initialDuration = 86400; 
         
         // Use localStorage to persist the countdown end time
