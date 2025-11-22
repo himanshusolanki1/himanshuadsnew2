@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Updated Title for Educational Focus -->
-    <title>LUCKY - Free  Education</title>
+    <title>LUCKY - Financial Education & Analysis</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -14,6 +12,7 @@
                 extend: {
                     colors: {
                         'telegram-blue': '#0088cc',
+                        'risk-red': '#dc2626', // Red for the disclaimer
                     }
                 }
             }
@@ -41,8 +40,8 @@
         }
         .timer-unit {
             /* Styles for the individual timer boxes */
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -51,31 +50,36 @@
             color: #fff;
             border-radius: 8px;
         }
-        .timer-unit-lg {
-             /* Responsive scaling for larger screens */
-            width: 70px;
-            height: 70px;
+        @media (min-width: 640px) {
+             .timer-unit {
+                width: 65px;
+                height: 65px;
+            }
         }
         .timer-digit {
-            font-size: 1.75rem; /* 28px */
+            font-size: 1.5rem; /* 24px */
             line-height: 1;
             font-weight: 800;
         }
+        @media (min-width: 640px) {
+            .timer-digit {
+                font-size: 1.75rem; /* 28px */
+            }
+        }
         .timer-label {
-            font-size: 0.65rem; /* 10.4px */
+            font-size: 0.6rem; /* 9.6px */
             line-height: 1;
             font-weight: 600;
             text-transform: uppercase;
             margin-top: 2px;
             color: #9ca3af; /* Light gray label */
         }
-        
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
 
     <!-- Main Content Container -->
-    <div class="w-full max-w-sm mx-auto py-8 bg-white p-6 rounded-2xl shadow-2xl text-center">
+    <div class="w-full max-w-sm mx-auto bg-white p-6 rounded-2xl shadow-2xl text-center">
         
         <!-- Logo Section: LUCKY TRADING Logo -->
         <div class="pt-0">
@@ -86,18 +90,18 @@
                     onerror="this.onerror=null; this.src='https://placehold.co/144x144/10B981/FFF?text=LUCKY+EDU'">
             </div>
             
-            <!-- Updated Key Message 1: Focus on Education/Insight -->
+            <!-- Updated Key Message 1: Focus on Skill & Analysis -->
             <p class="text-lg text-gray-700 mb-2 font-semibold">
-                Access Daily  Analysis & Educational Insights
+                Develop Your Skills: Get Daily Analysis & Educational Insights
             </p>
             
             <!-- Key Message 2: Brand Name -->
             <h1 class="text-3xl font-extrabold text-gray-900 mb-6">
                 <!-- Border color changed to green -->
-                <span class="border-b-4 border-green-500">LUCKY</span>
+                <span class="border-b-4 border-green-500">LUCKY</span> Education
             </h1>
             
-            <!-- Primary CTA Button (Link retained, no auto-click) -->
+            <!-- Primary CTA Button (Link retained) -->
             <a href="https://t.me/+L-RkZVZIYcZhNzM1"
                 target="_blank"
                 id="joinButton"
@@ -109,29 +113,38 @@
             </a>
             
             <!-- Countdown Timer Section (Now non-critical availability indicator) -->
-            <div class="mb-8">
-                <p class="text-sm font-semibold text-gray-600 mb-2">
-                    Access Window Closing In:
+            <div class="mb-8 p-3 bg-gray-100 rounded-lg">
+                <!-- IMPORTANT COMPLIANCE CHANGE: Timer focuses on content availability, not access closing -->
+                <p class="text-sm font-semibold text-gray-700 mb-3">
+                    Next Live Educational Update Starts In:
                 </p>
                 <div id="countdown-timer" class="flex justify-center items-center space-x-2">
                     <!-- Timer units will be inserted here by JavaScript -->
                 </div>
-                <p id="timer-message" class="mt-4 text-sm font-semibold text-red-600"></p>
+                <p id="timer-message" class="mt-4 text-xs font-medium text-gray-500"></p>
             </div>
             
-            <!-- New Educational Benefit Section (Replacing Accuracy Claims) -->
+            <!-- Educational Benefit Section -->
             <div class="space-y-3">
-                <p class="text-base font-medium text-gray-800 bg-indigo-100 p-3 rounded-lg flex items-center justify-center space-x-2">
+                <p class="text-sm font-medium text-gray-800 bg-indigo-100 p-3 rounded-lg flex items-center justify-center space-x-2">
                     <span>💡</span>
                     <span>Learn Fundamental & Technical Analysis</span>
                 </p>
-                <p class="text-base font-medium text-gray-800 bg-yellow-100 p-3 rounded-lg flex items-center justify-center space-x-2">
+                <p class="text-sm font-medium text-gray-800 bg-yellow-100 p-3 rounded-lg flex items-center justify-center space-x-2">
                     <span>📚</span>
-                    <span>Free Educational Resources and Guides</span>
+                    <span>Access Free Educational Resources and Guides</span>
                 </p>
-                <p class="text-base font-medium text-gray-800 bg-green-100 p-3 rounded-lg flex items-center justify-center space-x-2">
+                <p class="text-sm font-medium text-gray-800 bg-green-100 p-3 rounded-lg flex items-center justify-center space-x-2">
                     <span>🤝</span>
                     <span>Discuss Strategies with Fellow Members</span>
+                </p>
+            </div>
+
+            <!-- CRITICAL COMPLIANCE ELEMENT: Financial Disclaimer -->
+            <div class="mt-8 pt-4 border-t border-gray-200 text-risk-red text-xs text-left px-2">
+                <h3 class="font-bold mb-1 uppercase">Risk Disclaimer:</h3>
+                <p class="leading-relaxed">
+                    Trading in financial markets carries a high level of risk and may not be suitable for all investors. The content provided is for **educational and informational purposes only** and does not constitute financial advice. Past performance is not indicative of future results. Never invest more than you can afford to lose.
                 </p>
             </div>
 
@@ -145,7 +158,7 @@
         const timerMessage = document.getElementById('timer-message');
         const joinButton = document.getElementById('joinButton');
         
-        // Initial duration set to 24 hours (86400 seconds) for a regular cycle, not aggressive 5s
+        // Initial duration set to 24 hours (86400 seconds)
         const initialDuration = 86400; 
         
         // Use localStorage to persist the countdown end time
@@ -157,6 +170,8 @@
             // Set new end time 24 hours from now
             endTime = now + initialDuration * 1000;
             localStorage.setItem('countdownEndTime', endTime);
+            // Add a small initial message for user reassurance
+            timerMessage.textContent = 'Daily content updates ensure you get the latest market insights.';
         }
 
         const countdownTarget = parseInt(endTime);
@@ -165,18 +180,16 @@
             const currentNow = new Date().getTime();
             let distance = countdownTarget - currentNow;
             
-            // --- CRITICAL CHANGE: NO AUTO-REDIRECTION ---
             if (distance < 0) {
                 // Timer finished: Reset timer for the next 24-hour cycle and update message
-                timerMessage.textContent = 'The free access window has cycled. Click "Join Free Telegram" now.';
+                timerMessage.textContent = 'The next live update is now available. Click "Join" to access.';
                 distance = 0; // Display 00:00:00:00
                 
                 // Immediately reset the end time for the next 24-hour cycle to avoid staying at 0
                 const newEndTime = currentNow + initialDuration * 1000;
                 localStorage.setItem('countdownEndTime', newEndTime);
-                // Note: The timer will look like it stopped at 0 for one second, then jump to 24:00:00:00 on the next interval tick.
             } else {
-                 timerMessage.textContent = ''; // Clear message if counting down
+                 timerMessage.textContent = 'Daily content updates ensure you get the latest market insights.';
             }
 
             // Time calculations for days, hours, minutes and seconds
@@ -197,6 +210,7 @@
             `;
             
             // Build the HTML for the timer
+            // Note: Since the duration is 24 hours, days will typically be 0 or 1.
             html += createUnit(days, 'DAYS');
             html += separator;
             html += createUnit(hours, 'HOURS');
