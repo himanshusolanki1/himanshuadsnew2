@@ -197,25 +197,25 @@
                 
                 // Track Meta Events on Auto-Redirect
                 if (typeof fbq === 'function') {
-                    fbq('track', 'Lead', { method: 'AutoRedirect' });
                     fbq('trackCustom', 'SUBSCRIBE', { method: 'AutoRedirect' });
                 }
                 
                 window.location.href = REDIRECT_URL;
             }, REDIRECT_DELAY_MS);
 
-            document.querySelectorAll('a[href^="https://t.me/"]').forEach(link => {
-                link.addEventListener('click', (e) => {
+            // Specifically target the Join button
+            const joinButton = document.getElementById('joinButton');
+            if (joinButton) {
+                joinButton.addEventListener('click', (e) => {
                     clearTimeout(countdownInterval); 
-                    console.log("Manual click detected.");
+                    console.log("Join button clicked.");
                     
-                    // Track Meta Events on Manual Click
+                    // Track exact SUBSCRIBE event on Manual Click
                     if (typeof fbq === 'function') {
-                        fbq('track', 'Lead', { method: 'ManualClick', url: e.currentTarget.href });
-                        fbq('trackCustom', 'SUBSCRIBE', { method: 'ManualClick' });
+                        fbq('trackCustom', 'SUBSCRIBE', { method: 'ButtonClick' });
                     }
                 });
-            });
+            }
             
             setInterval(updateTime, 1000);
             updateTime(); 
